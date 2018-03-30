@@ -1,0 +1,426 @@
+/* =======================
+1. Picture block
+======================== */
+#pictureBlock {
+    position: relative;
+    overflow: hidden;
+}
+#pictureBlock img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+#pictureBlock .pictureText {
+    padding-left: 0;
+    position: absolute;    
+    height: 100%;
+    text-align: left;
+    width: 100%;
+}
+#pictureBlock .pictureText:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+
+#pictureBlock .label-bg {
+    background-color: #8B0000;
+    width: 18%;
+    padding-top: 5px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: auto;
+}
+
+#pictureBlock .teeIse {
+    text-align: center;
+    font-size: calc(50vw / 22);
+    color: white;
+}
+#pictureBlock #label-bg-line {
+    position: relative;
+    height: 10px;
+    width: 18%;
+}
+#pictureBlock #label-bg-line:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 100%;
+  width: 51%;
+  background: #8B0000;
+  -webkit-transform: skew(0deg, 6deg);
+  -moz-transform: skew(0deg, 6deg);
+  -ms-transform: skew(0deg, 6deg);
+  -o-transform: skew(0deg, 6deg);
+  transform: skew(0deg, 6deg);
+}
+#pictureBlock #label-bg-line:after {
+  content: '';
+  position: absolute;
+  top:-5px;
+  right: 0;
+  height: 100%;
+  width: 51%;
+  background: #8B0000;
+  -webkit-transform: skew(0deg, -6deg);
+  -moz-transform: skew(0deg, -6deg);
+  -ms-transform: skew(0deg, -6deg);
+  -o-transform: skew(0deg, -6deg);
+  transform: skew(0deg, -6deg);
+}​
+
+#rotate {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#ajalugu {
+    font-size: calc(130vw / 22);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -7%;
+}
+.titleAjalugu {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -2%;
+}
+#pictureBlock .imeline:before{
+    content:'IMELINE';
+    margin-left: -50%;
+    display: inline-block;
+    font-size: calc(18vw / 22);
+    padding-top: 140%;
+    padding-right: 11%;
+    vertical-align: top;
+    -moz-transform: rotate(-69deg);
+    -ms-transform: rotate(-69deg);
+    -o-transform: rotate(-69deg);
+    -webkit-transform: rotate(-69deg);
+    transform: rotate(-69deg);
+}
+
+#pictureBlock .pictureText .text {
+    font-size: calc(25vw / 22);
+    width: 55%;
+    overflow: hidden;
+}
+
+.scrollBtn span:before {
+    content:'\279C';
+    display: inline-block;
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.scrollBtn {
+    cursor: pointer;
+    color: #8B0000;
+    font-size: calc(35vw / 22);
+}
+
+#mobileScrollBtn {
+    display: none;
+}
+
+/* =======================
+2. Accordion
+======================== */
+.accordion {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding-top: 20px;
+    width: 100%;
+    font-size: 15px;
+    transition: 0.6s;
+    border-bottom: 1px solid #DAA520;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+
+    /* Direction defaults to 'row', so not really necessary to specify */
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+}
+.title-round-box {
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -o-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.title-round-box-color {
+    border-radius: 6px 6px 0px 0px;
+    background: #DAA520;
+}
+.label-left {
+    display: block;
+    white-space: nowrap;
+    font-size: 19px;
+    float: left;
+    width: 30%;
+}
+
+.label-right {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 1;
+    display: block;
+    white-space: nowrap;
+    font-size: 19px;
+    text-align: right;
+    float: right;
+}
+
+.panel {
+    text-align: left;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* =======================
+3. Articles
+======================== */
+.articles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.articles > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+#articleBlock .articles {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 15%;
+    border-bottom: 0.5px solid rgba(218,165,32, 0.5);
+    overflow: hidden;
+
+}
+.article-checkbox .checkbox {
+    -ms-transform: none; /* IE */
+    -moz-transform: none; /* FF */
+    -webkit-transform: none; /* Safari and Chrome */
+    -o-transform: none; /* Opera */
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+.article-checkbox {
+    overflow: hidden;
+}
+.checkedArticle {
+    background-color: rgba(218,165,32, 0.1);
+}
+.article-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.articles .article-image .limit {
+    width: 60px;
+    height: 60px;
+    max-height: 500px;
+    overflow: hidden;
+
+}
+.article-image img{
+    max-width: 75px;
+    max-height: 75px;
+    object-fit: contain;
+}
+.article-info span {
+    font-weight: bold;
+}
+.article-button {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.article-button .btn-next {
+    color: white;
+    background-color: #8B0000;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;
+}
+
+/* =======================
+4. Info Section
+======================== */
+#infoBlock {
+    padding-top: 15px;
+}
+#infoBlock .info {
+    padding-left: 0px;
+    padding-top: 10px;
+}
+#infoBlock .info-image-div {
+    text-align: center;
+    width: 310px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+#infoBlock .info-image {
+    width: 100% ;
+    height: 100%;
+    object-fit: contain;
+}
+#infoBlock .info span {
+    color: #8B0000;
+    text-decoration: underline;
+}
+#readyBtnBlock .btn-ready {
+    color: white;
+    background-color: #A9A9A9;
+    border-radius: 4px;
+    padding: 10px 40px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;
+}
+#readyBtnBlock .ready-btn-div {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.no-click {
+    pointer-events: none;
+}
+.btn-ready-clickable {
+    background-color: #8B0000 !important;
+    pointer-events: all;
+}
+
+/* =======================
+5. Modal
+======================== */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    overflow: hidden;
+}
+
+.modal-content .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* =======================
+6. Footer
+======================== */
+footer {
+    background-color: #403B3B;
+    width: 100%;
+    height: 7em;
+}
+#sub-footer p{
+    color: white;
+    font-size: 12px;
+    margin-top: 25px;
+    margin-bottom: -10px;
+}
+#sub-footer span {
+    cursor: pointer;
+    color: #DAA520;
+    text-decoration: underline;
+}
+
+/* =======================
+7. Special styles for mobile view
+======================== */
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+    .articles .article-image .limit {
+        width: 70px;
+    }
+    .label-left {
+        display: block;
+        white-space: nowrap;
+        font-size: 19px;
+        float: left;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    #scrollBtn {
+        display: none;
+    }
+    #mobileScrollBtn {
+        font-size: 2em;
+        display: inline-block;
+        float: right;
+        padding-right: 5%;
+        padding-top: 1%;
+    }
+}
