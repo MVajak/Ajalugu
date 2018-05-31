@@ -4,6 +4,7 @@ Counts the checked checkboxes in each panel and assigns the result to certain la
 */
 $(document).ready(function(){
 
+    var $selected;
     var $checkboxes = $(".checkbox");
     var $panelOne = $('#panelOne input[type="checkbox"]');
     var $panelTwo = $('#panelTwo input[type="checkbox"]');
@@ -18,10 +19,11 @@ $(document).ready(function(){
     });
 */
     $checkboxes.change(function(){
-        if ($(this).parent().parent().parent().attr('id') === "panelOne") {
+        $selected = $(this);
+        if ($selected.parent().parent().parent().attr('id') === "panelOne") {
             $currentPanel = $panelOne;
             $currentRightLabel = $('#label-right-one');
-        } else if ($(this).parent().parent().parent().attr('id') === "panelTwo") {
+        } else if ($selected.parent().parent().parent().attr('id') === "panelTwo") {
             $currentPanel = $panelTwo;
             $currentRightLabel = $('#label-right-two');
         }
@@ -45,6 +47,7 @@ When clicked checkboxes, makes sure if under every class="panel" there is one ch
 If there is, assigns CSS style by adding a class to the element.
 */
 $(document).ready(function () {
+    var btn = document.getElementsById("btn-ready");
     $('input[type="checkbox"]').change(function () {
         $a = $('#panelOne input[type="checkbox"]').filter(':checked').length;
         $b = $('#panelTwo input[type="checkbox"]').filter(':checked').length;
